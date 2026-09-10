@@ -1,6 +1,7 @@
 <script lang="ts">
     import { language } from "src/lang";
     import { DBState } from "src/ts/stores.svelte";
+    import { getHotkeyModifierLabels } from "src/ts/hotkeyModifiers";
 
     function formatHotkeyKey(key: string) {
         if (key === ' ') {
@@ -9,6 +10,9 @@
 
         return key?.toLocaleUpperCase() ?? '';
     }
+    let modifierLabels = $derived(getHotkeyModifierLabels({
+        useLegacyMacOSCtrlHotkeys: DBState.db.useLegacyMacOSCtrlHotkeys ?? false
+    }));
 </script>
 
 <h2 class="mb-2 text-2xl font-bold mt-2">{language.hotkey}</h2>
@@ -36,8 +40,10 @@
                     onclick={() => {
                         hotkey.ctrl = !hotkey.ctrl;
                     }}
+                    title={modifierLabels.ctrlName}
+                    aria-label={modifierLabels.ctrlName}
                 >
-                    Ctrl
+                    {modifierLabels.ctrl}
                 </button>
                 <button
                     class="h-7 min-w-12 rounded-md px-2 text-xs transition-colors hover:text-textcolor"
@@ -60,8 +66,10 @@
                     onclick={() => {
                         hotkey.alt = !hotkey.alt;
                     }}
+                    title={modifierLabels.altName}
+                    aria-label={modifierLabels.altName}
                 >
-                    Alt
+                    {modifierLabels.alt}
                 </button>
                 <input
                     value={formatHotkeyKey(hotkey.key)}
