@@ -124,7 +124,7 @@ export const languageChineseTraditional = {
         "inlayImages": "啟用後，可將圖片內嵌至對話；若 AI 支援圖片輸入，也能讀取這些圖片",
         "metrica":
             "Metric Systemizer 會在送出請求時將公制轉成英制，並在顯示輸出時再轉回公制，讓模型以英制處理，而使用者仍看到公制。若對話原本使用英制，不建議啟用",
-        "lorePlus": "Lorebook+ 是使用向量資料庫取代單純字串比對的實驗性功能，可改善 Bot 製作流程與 Lorebook 條目的比對效果",
+        "lorePlus": "Lorebook+ 是使用向量資料庫取代單純字串比對的實驗性功能，可改善角色卡製作流程與 Lorebook 條目的比對效果",
         "topP": "Top P 是核取樣（nucleus sampling）的機率門檻。模型會依 Token 機率由高到低累加，取涵蓋至少 top_p 累積機率的最小 Token 集合，再從該集合中取樣",
         "openAIFixer": "OpenAI Fixer 是用來修正部分 OpenAI 問題的外掛",
         "sayNothing": "啟用後，若沒有輸入任何文字，會自動輸入「say nothing」",
@@ -267,7 +267,7 @@ export const languageChineseTraditional = {
             "忽略清單中的供應商；若因此沒有任何可用供應商，請求會失敗。詳見 https://openrouter.ai/docs/guides/routing/provider-selection#ignoring-providers",
         "additionalPrompt":
             "啟用 Prompt Preprocess 時，會附加到主要提示詞末尾的文字。預設為「The assistant must act as {{char}}. user is {{user}}.」，用來建立基本角色扮演上下文",
-        "hideAllImagesDesc": "隱藏 Bot 圖示、Bot 圖片資源與 RisuRealm 封面圖片",
+        "hideAllImagesDesc": "隱藏角色圖示、角色圖片資源與 RisuRealm 封面圖片",
         "embedding":
             "Embedding 模型會用於多項功能的相似度搜尋：\n\n" +
             "- **長期記憶**：HypaMemory V2、HypaMemory V3、HanuraiMemory，以及啟用 HypaMemory 的 SupaMemory\n" +
@@ -706,7 +706,7 @@ export const languageChineseTraditional = {
     },
     "confirm": "確認",
     "goback": "返回",
-    "botSettings": "Bot 設定",
+    "botSettings": "聊天角色設定",
     "model": "模型",
     "apiKey": "API 金鑰",
     "providerURL": "請求 URL",
@@ -888,7 +888,7 @@ export const languageChineseTraditional = {
     "showFirstMessagePages": "顯示開局訊息分頁",
     "roundIcons": "圓形圖示",
     "streaming": "串流",
-    "chatBot": "聊天 Bot",
+    "chatBot": "聊天角色",
     "otherBots": "其他 Bot",
     "user": "使用者",
     "additionalAssets": "額外資源",
@@ -962,14 +962,14 @@ export const languageChineseTraditional = {
     "animationSpeed": "動畫速度",
     "screenshot": "螢幕截圖",
     "screenshotSaved": "螢幕截圖已儲存",
-    "createBotwithAI": "使用 AI 建立 Bot",
+    "createBotwithAI": "使用 AI 建立角色",
     "changeFolderName": "輸入新的資料夾名稱（留空則取消）",
     "cancel": "取消",
     "renameFolder": "重新命名資料夾",
     "changeFolderColor": "變更資料夾顏色",
     "changeFolderImage": "變更資料夾圖片",
     "fullWordMatching": "完整單字比對",
-    "botSettingAtStart": "啟動時開啟 Bot 選單",
+    "botSettingAtStart": "啟動時開啟聊天角色設定",
     "triggerStart": "送出對話時",
     "triggerInput": "使用者送出訊息時",
     "triggerOutput": "角色回應時",
@@ -1606,8 +1606,8 @@ export const languageChineseTraditional = {
     "pluginV2Warning": "外掛 V2 與 V2.1 被視為不安全，並會在未來版本停止運作。**請勿使用這些版本的外掛。** 若您是此外掛的開發者，請儘快升級至 V3",
     "createFolderOnBranch": "在分支上建立資料夾",
     "hamburgerButtonBottom": "將選單按鈕移至側邊欄底部",
-    "partialBackupFirstConfirm": "⚠️ 警告：部分本機備份 ⚠️\n\n此備份只會快速儲存必要資訊。\n\n會包含：\n- 資料庫（對話紀錄、角色、模組、外掛、提示詞、設定等）\n- 角色頭像（主要圖片）\n- 使用者頭像與自訂背景\n- 人設頭像\n- 資料夾圖片\n- Bot 預設集圖片\n\n⚠️ 不會包含：\n- 情緒立繪\n- 額外角色資源\n- VITS 語音檔案\n- 其他所有額外媒體檔案\n\n此備份檔案**不包含所有角色資源**！\n若需要完整備份，請使用一般本機備份。\n\n確定要繼續嗎？",
-    "partialBackupSecondConfirm": "⚠️⚠️ 最後警告 ⚠️⚠️\n\n此備份只會儲存角色個人檔案頭像、資料夾圖片，其他資源不會儲存！\n\n會儲存：\n- 資料庫（對話紀錄、角色、模組、外掛、提示詞、設定等）\n- 角色頭像（主要圖片）\n- 使用者頭像與自訂背景\n- 人設頭像\n- 資料夾圖片\n- Bot 預設集圖片\n\n不會儲存：\n- 情緒立繪\n- 額外角色資源\n- VITS 語音檔案\n- 其他所有媒體檔案\n\n⚠️ 只有在您**不需要**備份檔中的角色資源時才應繼續！⚠️\n\n真的確定要進行部分備份嗎？",
+    "partialBackupFirstConfirm": "⚠️ 警告：部分本機備份 ⚠️\n\n此備份只會快速儲存必要資訊。\n\n會包含：\n- 資料庫（對話紀錄、角色、模組、外掛、提示詞、設定等）\n- 角色頭像（主要圖片）\n- 使用者頭像與自訂背景\n- 人設頭像\n- 資料夾圖片\n- 聊天角色預設集圖片\n\n⚠️ 不會包含：\n- 情緒立繪\n- 額外角色資源\n- VITS 語音檔案\n- 其他所有額外媒體檔案\n\n此備份檔案**不包含所有角色資源**！\n若需要完整備份，請使用一般本機備份。\n\n確定要繼續嗎？",
+    "partialBackupSecondConfirm": "⚠️⚠️ 最後警告 ⚠️⚠️\n\n此備份只會儲存角色個人檔案頭像、資料夾圖片，其他資源不會儲存！\n\n會儲存：\n- 資料庫（對話紀錄、角色、模組、外掛、提示詞、設定等）\n- 角色頭像（主要圖片）\n- 使用者頭像與自訂背景\n- 人設頭像\n- 資料夾圖片\n- 聊天角色預設集圖片\n\n不會儲存：\n- 情緒立繪\n- 額外角色資源\n- VITS 語音檔案\n- 其他所有媒體檔案\n\n⚠️ 只有在您**不需要**備份檔中的角色資源時才應繼續！⚠️\n\n真的確定要進行部分備份嗎？",
     "savePartialLocalBackup": "儲存部分本機備份（不含角色資源）",
     "pluginProviderNotFound": "偵測到未知外掛。請更換模型，或啟用對應的外掛",
     "bootstrap": {
