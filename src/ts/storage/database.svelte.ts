@@ -975,7 +975,6 @@ export interface Database{
     openrouterFallback:boolean
     selectedPersona:number
     personas:RisuPersona[]
-    personaNote:boolean
     assetWidth:number
     animationSpeed:number
     botSettingAtStart:false
